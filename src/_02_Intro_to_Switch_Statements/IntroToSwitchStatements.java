@@ -29,21 +29,21 @@ public class IntroToSwitchStatements {
 
 		case 0:
 			System.out.println("0 from switch");
-			break;
+			//break;
 		case 1:
 			System.out.println("1 from switch");
-			break;
+			//break;
 		case 2:
 			System.out.println("2 from switch");
-			break;
+			//break;
 		default:
 			System.out.println("Out of bounds from switch");
-			break;
+			//break;
 		}
 
 		// 1. Run the program and get all the possible results in the console.
 
-		// 2. Remove the break statements in the switch statments and repeat step 1.
+		// 2. Remove the break statements in the switch statements and repeat step 1.
 
 		// 3. Uncomment the following code.
 
