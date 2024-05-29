@@ -37,7 +37,7 @@ public class Snake {
 		 * Create variables for the next X and Y location of the snake's head.
 		 * Initialize them to the current X and Y locations.
 		 */
-
+		//HERE HERE HERE HERE HERE HERE HERE HERE HERE START HERE HERE HERE
 		/*
 		 * Use a switch statement to check on the currentDirection of the snake and
 		 * calculate the head's next x and y position. Depending on the direction, the
