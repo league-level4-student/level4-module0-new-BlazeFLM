@@ -117,6 +117,7 @@ public class SnakeGame implements ActionListener, KeyListener {
 		 * Hint: KeyEvent.VK_UP.
 		 */
 
+		//HEREHREHREHREREREHRRTDRFYGHUBJINKOMPL<HERRHERHREERHH <------------------------------------------------------------
 	}
 
 	private void randomizeFoodLocation() {
