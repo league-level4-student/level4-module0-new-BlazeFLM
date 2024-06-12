@@ -37,7 +37,8 @@ public class Snake {
 		 * Create variables for the next X and Y location of the snake's head.
 		 * Initialize them to the current X and Y locations.
 		 */
-		Location next = head.getLocation();
+		int x = head.getLocation().getX();
+		int y = head.getLocation().getY();
 
 		/*
 		 * Use a switch statement to check on the currentDirection of the snake and
@@ -47,16 +48,16 @@ public class Snake {
 
 		switch (currentDirection) {
 		case UP:
-			next.setY(next.getY() - 1);
+			y-=1;	
 			break;
 		case DOWN:
-			next.setY(next.getY() + 1);
+			y+=1;
 			break;
 		case LEFT:
-			next.setX(next.getX() - 1);
+			x-=1;
 			break;
 		case RIGHT:
-			next.setX(next.getX() + 1);
+			x+=1;
 			break;
 		}
 		/*
@@ -75,8 +76,7 @@ public class Snake {
 		 * Create a new Location object and initialize it with the values calculated in
 		 * the first step. Then set the head's location equal to the new location.
 		 */
-		Location newHeadLocation = new Location(next.getX(), next.getY());
-		head.setLocation(newHeadLocation);
+		head.setLocation(new Location(x, y));
 		// Set the canMove member variable to true.
 		
 		canMove = true;
@@ -144,10 +144,10 @@ public class Snake {
 		 * the window and false otherwise.
 		 */
 		
-		if(getHeadLocation().getX() > SnakeGame.WINDOW_WIDTH 
-				|| getHeadLocation().getX() < SnakeGame.WINDOW_WIDTH 
-				|| getHeadLocation().getY() > SnakeGame.WINDOW_WIDTH 
-				|| getHeadLocation().getY() < SnakeGame.WINDOW_WIDTH) {
+		if(getHeadLocation().getX() > SnakeGame.WIDTH 
+				|| getHeadLocation().getX() < 0 
+				|| getHeadLocation().getY() > SnakeGame.HEIGHT 
+				|| getHeadLocation().getY() < 0) {
 			return true;
 		}
 		return false;
@@ -160,8 +160,8 @@ public class Snake {
 		 * location as any other body segment.
 		 */
 		
-		 for(SnakeSegment s : snake) {
-			 if(getHeadLocation().equals(s.getLocation())) {
+		 for(int i = 1; i < snake.size(); i++) {
+			 if(getHeadLocation().equals(snake.get(i).getLocation())) {
 				 return true;
 			 }
 		 }
